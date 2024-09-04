@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pl">
   <head>
+    <link rel="stylesheet" href="css/styles.css" />
     <meta charset="utf-8" />
     <title>Bakun Wojciech Portfolio</title>
     <meta name="author" content="Wojciech Bakun" />
@@ -8,29 +9,36 @@
       name="description"
       content="Bakun Wojciech Portfolio to strona internetowa mająca na celu zaprezentowanie projektów frontend, fullstack, iot oraz informacji odnośnie ich autora, którym jest Wojciech Bakun. "
     />
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
   </head>
 
   <body>
     <header>
+      <div class="box-image">
+        <img src="assets/images/wojtek.png" alt="Zdjęcie Wojciech Bakun" />
+      </div>
       <nav>
-        <img src="images/favicon.ico" alt="Zdjęcie Wojciech Bakun">
-        <ul>
-          <li>Github</li>
-          <li>LinkedIn</li>
-          <li>
-            <a
-              href="assets/bakun_wojciech_iot_student_cv.pdf"
-              download="bakun_wojciech_iot_student_cv.pdf"
-              >CV</a
-            >
-          </li>
-        </ul>
+        <div class="box-image">
+          <img
+            src="assets/images/linkedin.png"
+            alt="Link do profilu na LinkedIn"
+          />
+        </div>
+        <div class="box-image">
+          <img src="assets/images/github.png" alt="Link do profilu na GitHub" />
+        </div>
+        <div class="box-image">
+          <a
+            href="assets/documents/bakun_wojciech_iot_student_cv.pdf"
+            download="bakun_wojciech_iot_student_cv.pdf"
+            ><img src="assets/images/cv.png" alt="Link do pobrania CV"
+          /></a>
+        </div>
       </nav>
     </header>
     <main>
-<h1>Wojciech Bakun Portfolio</h1>
-      <section>
+      <h1>Wojciech Bakun Portfolio</h1>
+      <section class="about-me-short">
         <h2>O mnie</h2>
         <p>
           Nazywam się <strong>Wojciech Bakun</strong> i studiuję Inżynierię
@@ -42,37 +50,27 @@
       </section>
 
       <h2>Moje projekty</h2>
-      <section>
-        <p>Pracowałem nad</p>
-        <ul>
-          <li>frontend</li>
-          <li>fullstack</li>
-          <li>iot</li>
-        </ul>
-      </section>
+      <div class="categories">
+        <p>pracowałem nad</p>
+        <section class="dev-categories">
+          <button class="dev-button"><b>Frontend</b></button>
+          <button class="dev-button">Fullstack</button>
+          <button class="dev-button">IoT</button>
+        </section>
+      </div>
 
-      <section>
-        <ul>
-          <dl>
-            <dt>Prosta - Nauka Matematyki</dt>
-            <dd>Aplikacja mobilna przygotowująca 8 klasistów do egzaminu.</dd>
-          </dl>
-          <dl>
-            <dt>Butlometr</dt>
-            <dd>System monitorujący stan butli do nurkowania.</dd>
-          </dl>
-          <dl>
-            <dt>Dzień dobry</dt>
-            <dd>
-              Aplikacja mobilna ułatwiająca utrzymanie roślin i przekazująca w
-              praktyczny sposób informacje o warunkach atmosferycznych.
-            </dd>
-          </dl>
-          <dl>
-            <dt>Just Plan It</dt>
-            <dd>Apliakcja webowa słuząca do planowania długoterminowego.</dd>
-          </dl>
-        </ul>
+      <section class="projects">
+        <button class="projects-button">l</button>
+        <img class="projects-images" src="assets/images/Frame 1.png" alt="" />
+        <section class="projects-description">
+          <p>Prosta</p>
+          <p>Aplikacja mobilna przygotowująca 8 klasistów do egzaminu.</p>
+          <section class="projects-technologies">
+            <div class="image-div-border"><img class="tech-image" src="assets/images/flutter.png" alt="Flutter" /></div>
+            <div class="image-div-border"><img class="tech-image" src="assets/images/firebase.png" alt="Firebase" /></div>
+          </section>
+        </section>
+        <button class="projects-button">r</button>
       </section>
     </main>
   </body>
