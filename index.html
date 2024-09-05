@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="pl">
   <head>
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/animations.css" />
     <meta charset="utf-8" />
     <title>Bakun Wojciech Portfolio</title>
     <meta name="author" content="Wojciech Bakun" />
@@ -11,7 +13,6 @@
     />
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
   </head>
-
   <body>
     <header>
       <div class="box-image">
@@ -36,6 +37,7 @@
         </div>
       </nav>
     </header>
+    <div class="sized-box"></div>
     <main>
       <h1>Wojciech Bakun Portfolio</h1>
       <section class="about-me-short">
@@ -48,33 +50,114 @@
           <a href="" title="Informacje na temat Wojciecha Bakuna.">tutaj</a>.
         </p>
       </section>
-
+      <div class="sized-box"></div>
       <h2>Moje projekty</h2>
-      <div class="categories">
-        <p>pracowałem nad</p>
-        <section class="dev-categories">
-          <button class="dev-button"><b>Frontend</b></button>
-          <button class="dev-button">Fullstack</button>
-          <button class="dev-button">IoT</button>
-        </section>
-      </div>
-
-      <section class="projects">
-        <button class="projects-button">l</button>
-        <img class="projects-images" src="assets/images/Frame 1.png" alt="" />
-        <section class="projects-description">
-          <p>Prosta</p>
-          <p>Aplikacja mobilna przygotowująca 8 klasistów do egzaminu.</p>
-          <section class="projects-technologies">
-            <div class="image-div-border"><img class="tech-image" src="assets/images/flutter.png" alt="Flutter" /></div>
-            <div class="image-div-border"><img class="tech-image" src="assets/images/firebase.png" alt="Firebase" /></div>
+      <section class="project-section">
+        <div class="categories">
+          <p>moje projekty</p>
+          <section class="dev-categories">
+            <button class="dev-button"><b>Frontend</b></button>
+            <button class="dev-button">Fullstack</button>
+            <button class="dev-button">IoT</button>
           </section>
+        </div>
+        <div class="sized-box-small"></div>
+
+                <section class="project">
+          <div class="project-container">
+            <div class="projects-images-box">
+              <img
+                class="projects-images"
+                src="assets/images/frame1.png"
+                alt=""
+              />
+            </div>
+            <div class="projects-description">
+              <p class="project-title">Prosta</p>
+              <p class="project-description">
+                Aplikacja mobilna przygotowująca 8 klasistów do egzaminu.
+              </p>
+              <div class="projects-technologies">
+                <div class="image-div-border">
+                  <img
+                    class="tech-image"
+                    src="assets/images/flutter.png"
+                    alt="Flutter"
+                  />
+                </div>
+                <div class="image-div-border">
+                  <img
+                    class="tech-image"
+                    src="assets/images/firebase.png"
+                    alt="Firebase"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
         </section>
-        <button class="projects-button">r</button>
+
+        <section class="project">
+          <div class="project-container">
+            <div class="projects-images-box">
+              <img
+                class="projects-images"
+                src="assets/images/frame1.png"
+                alt=""
+              />
+            </div>
+            <div class="projects-description">
+              <p class="project-title">Tic Tac Toe</p>
+              <p class="project-description">
+                Aplikacja mobilna z wieloma trybami gry w kółko - krzyzyk.
+              </p>
+              <div class="projects-technologies">
+                <div class="image-div-border">
+                  <img
+                    class="tech-image"
+                    src="assets/images/flutter.png"
+                    alt="Flutter"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+        </section>
+        
+
+        <section class="project">
+          <div class="project-container">
+            <div class="projects-images-box">
+              <img
+                class="projects-images"
+                src="assets/images/frame1.png"
+                alt=""
+              />
+            </div>
+            <div class="projects-description">
+              <p class="project-title">Visual Quest</p>
+              <p class="project-description">
+                Aplikacja mobilna z quizami o tematyce pop-kulturowej.
+              </p>
+              <div class="projects-technologies">
+                <div class="image-div-border">
+                  <img
+                    class="tech-image"
+                    src="assets/images/flutter.png"
+                    alt="Flutter"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
       </section>
     </main>
   </body>
-
+  <div class="sized-box"></div>
   <footer>
     <hr />
     <p>
@@ -82,5 +165,6 @@
       mnie!
     </p>
     <a href="mailto:wojciechbakundev@gmail.com">Mail</a>
+    <div class="sized-box-small"></div>
   </footer>
 </html>

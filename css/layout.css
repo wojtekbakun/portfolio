@@ -1,0 +1,136 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url();
+}
+
+
+html{
+    font-family: "Roboto", monospace;
+    background-color: #E7EBEE;
+    color: #515C68;
+    max-width: 800px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    text-align: center;
+    font-size: x-small;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+h1, h2{
+    display: none;
+}
+
+.socials-and-cv{
+    display: flex;
+    flex-direction: row;
+}
+
+.about-me-short{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    /* min-height: 100vh; */
+    justify-content: center;
+}
+
+.about-me-short p{
+    font-size: x-large;
+    font-weight: lighter;
+}
+
+.project-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
+}
+
+.project{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.categories{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: x-small;
+    font-weight: 100;
+    width: min-content;
+}
+
+.projects-technologies{
+    display: flex;
+    flex-direction: row;
+}
+
+.project-title{
+    font-size: large;
+    font-weight: 600;
+    margin: 0;
+}
+
+.project-description{
+    font-size: small;
+    font-weight: 100;
+    margin: .4em 0 2em 0;
+}
+
+.projects-images{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 240px;
+}
+
+.projects-images-box{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+
+.projects-description{
+    display: flex;
+    flex:2;
+    flex-direction: column;
+    align-items:start;
+    padding-inline: 1em;
+    margin-left: 1em;
+}
+
+.project-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
