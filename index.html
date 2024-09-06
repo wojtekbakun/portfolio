@@ -12,6 +12,7 @@
       content="Bakun Wojciech Portfolio to strona internetowa mająca na celu zaprezentowanie projektów frontend, fullstack, iot oraz informacji odnośnie ich autora, którym jest Wojciech Bakun. "
     />
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+    <script src="source/app.js"></script>
   </head>
   <body>
     <header>
@@ -56,7 +57,7 @@
         <div class="categories">
           <p>moje projekty</p>
           <section class="dev-categories">
-            <button class="dev-button"><b>Frontend</b></button>
+            <button class="dev-button" onclick="changeText('Krzywa')"><b>Frontend</b></button>
             <button class="dev-button">Fullstack</button>
             <button class="dev-button">IoT</button>
           </section>
@@ -73,7 +74,7 @@
               />
             </div>
             <div class="projects-description">
-              <p class="project-title">Prosta</p>
+              <p class="project-title" id="project1">Prosta</p>
               <p class="project-description">
                 Aplikacja mobilna przygotowująca 8 klasistów do egzaminu.
               </p>
@@ -96,62 +97,6 @@
             </div>
           </div>
           <hr />
-        </section>
-
-        <section class="project">
-          <div class="project-container">
-            <div class="projects-images-box">
-              <img
-                class="projects-images"
-                src="assets/images/frame1.png"
-                alt=""
-              />
-            </div>
-            <div class="projects-description">
-              <p class="project-title">Tic Tac Toe</p>
-              <p class="project-description">
-                Aplikacja mobilna z wieloma trybami gry w kółko - krzyzyk.
-              </p>
-              <div class="projects-technologies">
-                <div class="image-div-border">
-                  <img
-                    class="tech-image"
-                    src="assets/images/flutter.png"
-                    alt="Flutter"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <hr />
-        </section>
-        
-
-        <section class="project">
-          <div class="project-container">
-            <div class="projects-images-box">
-              <img
-                class="projects-images"
-                src="assets/images/frame1.png"
-                alt=""
-              />
-            </div>
-            <div class="projects-description">
-              <p class="project-title">Visual Quest</p>
-              <p class="project-description">
-                Aplikacja mobilna z quizami o tematyce pop-kulturowej.
-              </p>
-              <div class="projects-technologies">
-                <div class="image-div-border">
-                  <img
-                    class="tech-image"
-                    src="assets/images/flutter.png"
-                    alt="Flutter"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
         </section>
 
       </section>
