@@ -57,47 +57,17 @@
         <div class="categories">
           <p>moje projekty</p>
           <section class="dev-categories">
-            <button class="dev-button" onclick="changeText('Krzywa')"><b>Frontend</b></button>
+            <button class="dev-button" onclick="changeText('Krzywa')">
+              <b>Frontend</b>
+            </button>
             <button class="dev-button">Fullstack</button>
             <button class="dev-button">IoT</button>
           </section>
         </div>
         <div class="sized-box-small"></div>
 
-                <section class="project">
-          <div class="project-container">
-            <div class="projects-images-box">
-              <img
-                class="projects-images"
-                src="assets/images/frame1.png"
-                alt=""
-              />
-            </div>
-            <div class="projects-description">
-              <p class="project-title" id="project1">Prosta</p>
-              <p class="project-description">
-                Aplikacja mobilna przygotowująca 8 klasistów do egzaminu.
-              </p>
-              <div class="projects-technologies">
-                <div class="image-div-border">
-                  <img
-                    class="tech-image"
-                    src="assets/images/flutter.png"
-                    alt="Flutter"
-                  />
-                </div>
-                <div class="image-div-border">
-                  <img
-                    class="tech-image"
-                    src="assets/images/firebase.png"
-                    alt="Firebase"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <hr />
-        </section>
+  <div id="projects-div"></div>
+  <script src="source/app.js" onload="showProject('1')"></script>
 
       </section>
     </main>
