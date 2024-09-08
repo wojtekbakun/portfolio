@@ -30,35 +30,22 @@ const butlometr = new Project(
 
 const allProjects = [prosta, butlometr];
 
-function getProjects(category) {
-  allProjects.forEach(project => {
-    if (project.categories.includes(category)) {
-      console.log(project.title);
-    }
-    else {
-      console.log(`${project.title} doesn't belong to this category`);
-    }
-  })
-};
 
-function showProject(project) {
-
-  switch(project){
-    case '1':
-      project = prosta;
-      break;
-    case '2':
-      project = butlometr;
-      break;
-    default:
-      console.log('Project not found');
+function showProjectsFromCategory(category) {
+  const projectsDiv = document.getElementById("projects-div");
+  const projectsToShow = filterProjects(category);
+  projectsToShow.forEach(project =>
+  {
+    const projectTemplate = setProjectTemplate(project);
+    projectsDiv.innerHTML += projectTemplate;
   }
-
-  const projectHTML = setProjectTemplate(project);
-  const projectsDiv = document.getElementById('projects-div');
-  projectsDiv.innerHTML = projectHTML;
+  )
   document.body.appendChild(projectsDiv);
-};
+}
+
+function filterProjects(category){
+  return projectsToShow = allProjects.filter(project => project.categories.includes(category));
+}
 
 
 function setProjectTemplate(project){
