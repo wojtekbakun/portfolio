@@ -24,7 +24,7 @@ const butlometr = new Project(
   "../assets/images/frame1.png",
   "Aplikacja mobilna dla nurków, która pozwala na zarządzanie butlami nurkowymi.",
   ["flutter", "firebase"],
-  ["frontend", "x"],
+  ["frontend", "iot", "fullstack"],
   "",
 );
 
@@ -32,23 +32,55 @@ const allProjects = [prosta, butlometr];
 
 
 function showProjectsFromCategory(category) {
-  const projectsDiv = document.getElementById("projects-div");
-  const projectsToShow = filterProjects(category);
+  const projectsDiv = document.getElementById('projects-div');
+  projectsDiv.innerHTML = "";
+
+  let projectsToShow = [];
+  projectsToShow = filterProjects(category);
+
   projectsToShow.forEach(project =>
   {
-    const projectTemplate = setProjectTemplate(project);
+    // don't display hr after the last project
+    const isHrToDisplay = projectsToShow.indexOf(project) !== projectsToShow.length - 1;
+
+    // set project template
+    let projectTemplate = setProjectTemplate(project, isHrToDisplay);
+
+    // append project to the projectsDiv
     projectsDiv.innerHTML += projectTemplate;
   }
   )
+  // make selected category text bold
+  makeSelectedCategoryBold(category);
+
+  // append projectsDiv to the body
   document.body.appendChild(projectsDiv);
 }
 
 function filterProjects(category){
-  return projectsToShow = allProjects.filter(project => project.categories.includes(category));
+  let filteredProjects = [];
+  filteredProjects = allProjects.filter(project => project.categories.includes(category));
+  return filteredProjects;
+}
+
+function makeSelectedCategoryBold(category){
+  const categories = document.getElementsByClassName('dev-button');
+  const clickedCategory = category.toLowerCase();
+  for(let i = 0; i < categories.length; i++){
+    const categoryText = categories[i].innerText.toLowerCase();
+    let categoryTrimmedText = categoryText.trim();
+    console.log(`clickedCategory: ${clickedCategory} (${clickedCategory.length} letters), textCategory: ${categoryTrimmedText} (${categoryTrimmedText.length} letters)`);
+    if(clickedCategory === categoryTrimmedText){
+      categories[i].style.fontWeight = "bold";
+      console.log(`making bold: ${categories[i].innerText}`);
+    } else {
+      categories[i].style.fontWeight = "normal";
+    }
+  }
 }
 
 
-function setProjectTemplate(project){
+function setProjectTemplate(project, isHrToDisplay) {
   const projectTemplate =
   `<section class="project">
   <div class="project-container">
@@ -62,7 +94,7 @@ function setProjectTemplate(project){
     <div class="projects-description">
       <p class="project-title" id="project1">${project.title}</p>
       <p class="project-description">
-        Aplikacja mobilna przygotowująca 8 klasistów do egzaminu.
+        ${project.shortDescription}
       </p>
       <div class="projects-technologies">
         <div class="image-div-border">
@@ -82,7 +114,7 @@ function setProjectTemplate(project){
       </div>
     </div>
   </div>
-  <hr />
+  ${isHrToDisplay ? "<hr />" : ""}
 </section>`;
 
 return projectTemplate;
