@@ -30,6 +30,17 @@ const butlometr = new Project(
 
 const allProjects = [prosta, butlometr];
 
+const iotButton = document.getElementById('iot-button');
+const frontendButton = document.getElementById('frontend-button');
+const fullstackButton = document.getElementById('fullstack-button');
+
+iotButton.onclick = () => showProjectsFromCategory('iot');
+frontendButton.onclick = () => showProjectsFromCategory('frontend');
+fullstackButton.onclick = () => showProjectsFromCategory('fullstack');
+
+const projectsDiv = document.getElementById('projects-div');
+projectsDiv.onload = showProjectsFromCategory('frontend');
+
 
 function showProjectsFromCategory(category) {
   const projectsDiv = document.getElementById('projects-div');
@@ -38,8 +49,7 @@ function showProjectsFromCategory(category) {
   let projectsToShow = [];
   projectsToShow = filterProjects(category);
 
-  projectsToShow.forEach(project =>
-  {
+  projectsToShow.forEach(project => {
     // don't display hr after the last project
     const isHrToDisplay = projectsToShow.indexOf(project) !== projectsToShow.length - 1;
 
@@ -52,37 +62,35 @@ function showProjectsFromCategory(category) {
   )
   // make selected category text bold
   makeSelectedCategoryBold(category);
+};
 
-  // append projectsDiv to the body
-  document.body.appendChild(projectsDiv);
-}
-
-function filterProjects(category){
+function filterProjects(category) {
   let filteredProjects = [];
   filteredProjects = allProjects.filter(project => project.categories.includes(category));
   return filteredProjects;
-}
+};
 
-function makeSelectedCategoryBold(category){
+function makeSelectedCategoryBold(category) {
   const categories = document.getElementsByClassName('dev-button');
   const clickedCategory = category.toLowerCase();
-  for(let i = 0; i < categories.length; i++){
+  for (let i = 0; i < categories.length; i++) {
     const categoryText = categories[i].innerText.toLowerCase();
     let categoryTrimmedText = categoryText.trim();
     console.log(`clickedCategory: ${clickedCategory} (${clickedCategory.length} letters), textCategory: ${categoryTrimmedText} (${categoryTrimmedText.length} letters)`);
-    if(clickedCategory === categoryTrimmedText){
+    if (clickedCategory === categoryTrimmedText) {
       categories[i].style.fontWeight = "bold";
       console.log(`making bold: ${categories[i].innerText}`);
     } else {
       categories[i].style.fontWeight = "normal";
     }
   }
-}
+};
 
 
 function setProjectTemplate(project, isHrToDisplay) {
   const projectTemplate =
-  `<section class="project">
+    `
+  <section class="project">
   <div class="project-container">
     <div class="projects-images-box">
       <img
@@ -114,8 +122,8 @@ function setProjectTemplate(project, isHrToDisplay) {
       </div>
     </div>
   </div>
-  ${isHrToDisplay ? "<hr />" : ""}
+  ${isHrToDisplay ? "<hr />" : `<div id="sized-box"></div>`}
 </section>`;
 
-return projectTemplate;
+  return projectTemplate;
 };

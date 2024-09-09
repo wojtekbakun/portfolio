@@ -12,7 +12,6 @@
       content="Bakun Wojciech Portfolio to strona internetowa mająca na celu zaprezentowanie projektów frontend, fullstack, iot oraz informacji odnośnie ich autora, którym jest Wojciech Bakun. "
     />
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
-    <script src="source/app.js" ></script>
   </head>
   <body>
     <header>
@@ -59,19 +58,19 @@
           <section class="dev-categories">
             <button
               class="dev-button"
-              onclick="showProjectsFromCategory('frontend')"
+              id="frontend-button"
             >
               <p>Frontend</p>
             </button>
             <button
               class="dev-button"
-              onclick="showProjectsFromCategory('fullstack')"
+              id="fullstack-button"
             >
               <p>Fullstack</p>
             </button>
             <button
               class="dev-button"
-              onclick="showProjectsFromCategory('iot')"
+              id="iot-button"
             >
               <p>IoT</p>
             </button>
@@ -80,12 +79,13 @@
         <div class="sized-box-small"></div>
 
         <div id="projects-div"></div>
-        <script onload="showProjectsFromCategory('frontend')"></script>
       </section>
     </main>
+    <script src="source/app.js" ></script>
   </body>
-  <div class="sized-box"></div>
+
   <footer>
+    <div class="sized-box"></div>
     <hr />
     <p>
       Aby dowiedzieć się więcej o moich projektach lub się przywitać, napisz do
