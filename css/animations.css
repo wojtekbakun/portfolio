@@ -1,16 +1,18 @@
-/* p {
-    animation-duration: .5s;
-    animation-name: slidein;
-  }
-  
-  @keyframes slidein {
+@keyframes fadeIn {
     from {
-      translate: 2 0;
-      scale: 90% 1;
+      opacity: 0;
+      transform: translateX(-5em);
     }
-  
     to {
-      translate: 0 0;
-      scale: 100% 1;
+      opacity: 1;
+      transform: translateX(0);
     }
-  } */
+  }
+
+  .project{
+    animation: fadeIn .5s ease-out;
+  }
+
+  header .social-img:hover{
+    filter: invert(.2);
+  }

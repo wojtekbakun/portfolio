@@ -37,13 +37,17 @@ header img{
     border: none;
     background-color: inherit;
     font-family: inherit;
+    color: #52616b;
 }
 
 .dev-button:hover{
-    background-color: #D1D9E0;
+    background-color: none;
 }
 
-
+.dev-button > p:hover{
+    color: #1e2022;
+    font-weight: 800;
+}
 
 .image-div-border{
     display: flex;
@@ -62,6 +66,8 @@ header img{
     height: 24px;
     border-radius: .5em;
     padding-inline: .5em;
+    max-width: 80%;
+    object-fit: scale-down;
 }
 
 .projects-button{

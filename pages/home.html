@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="pl">
   <head>
-    <link rel="stylesheet" href="css/layout.css" />
-    <link rel="stylesheet" href="css/components.css" />
-    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/animations.css" />
     <meta charset="utf-8" />
     <title>Bakun Wojciech Portfolio</title>
     <meta name="author" content="Wojciech Bakun" />
@@ -11,28 +11,29 @@
       name="description"
       content="Bakun Wojciech Portfolio to strona internetowa mająca na celu zaprezentowanie projektów frontend, fullstack, iot oraz informacji odnośnie ich autora, którym jest Wojciech Bakun. "
     />
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <header>
       <div class="box-image">
-        <img src="assets/images/wojtek.png" alt="Zdjęcie Wojciech Bakun" />
+        <img src="../assets/images/wojtek.png" alt="Zdjęcie Wojciech Bakun" />
       </div>
       <nav>
         <div class="box-image">
-          <img
-            src="assets/images/linkedin.png"
+         <a href="https://www.linkedin.com/in/wojciechbakun/"> <img
+            src="../assets/images/linkedin.png"
             alt="Link do profilu na LinkedIn"
-          />
+            class="social-img"
+          /> </a>
         </div>
         <div class="box-image">
-          <img src="assets/images/github.png" alt="Link do profilu na GitHub" />
+        <a href="https://github.com/wojtekbakun">  <img src="../assets/images/github.png" alt="Link do profilu na GitHub"  class="social-img"/> </a>
         </div>
         <div class="box-image">
           <a
-            href="assets/documents/bakun_wojciech_iot_student_cv.pdf"
+            href="../assets/documents/bakun_wojciech_iot_student_cv.pdf"
             download="bakun_wojciech_iot_student_cv.pdf"
-            ><img src="assets/images/cv.png" alt="Link do pobrania CV"
+            ><img src="../assets/images/cv.png" alt="Link do pobrania CV" class="social-img"
           /></a>
         </div>
       </nav>
@@ -47,14 +48,14 @@
           Internetu Rzeczy. Pasjonuję się tworzeniem aplikacji mobilnych,
           webowych i projektowaniem urządzeń elektronicznych, a więcej o mnie
           przeczytasz
-          <a href="" title="Informacje na temat Wojciecha Bakuna.">tutaj</a>.
+          <a href="about.html" title="Informacje na temat Wojciecha Bakuna.">tutaj</a>.
         </p>
       </section>
       <div class="sized-box"></div>
-      <h2>Moje projekty</h2>
+      <h2>Pracowałem nad tymi projektami</h2>
       <section class="project-section">
         <div class="categories">
-          <p>moje projekty</p>
+          <p>pracowałem nad:</p>
           <section class="dev-categories">
             <button
               class="dev-button"
@@ -81,17 +82,18 @@
         <div id="projects-div"></div>
       </section>
     </main>
-    <script src="source/app.js" type="module"></script>
-  </body>
+    <script src="../source/app.js" type="module"></script>
 
-  <footer>
-    <div class="sized-box"></div>
-    <hr />
-    <p>
-      Aby dowiedzieć się więcej o moich projektach lub się przywitać, napisz do
-      mnie!
-    </p>
-    <a href="mailto:wojciechbakundev@gmail.com">Mail</a>
-    <div class="sized-box-small"></div>
-  </footer>
+    <footer>
+      <div class="sized-box"></div>
+      <hr />
+      <p>
+        Aby dowiedzieć się więcej o moich projektach lub się przywitać, napisz do
+        mnie!
+      </p>
+      <a href="mailto:wojciechbakundev@gmail.com">Mail</a>
+      <div class="sized-box-small"></div>
+    </footer>
+
+  </body>
 </html>
