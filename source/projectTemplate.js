@@ -36,7 +36,7 @@ function setProjectTemplate(project, isHrToDisplay) {
             <img
               class="tech-image"
               src="${getSingleImage(element)}"
-              alt="Flutter"
+              alt="${element}"
             />
           </div>
           `

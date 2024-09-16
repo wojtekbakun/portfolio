@@ -12,8 +12,8 @@ const prosta = new Project(
 const butlometr = new Project(
     "Butlometr",
     "../assets/images/butlometr.png",
-    "Aplikacja mobilna dla nurków, która pozwala na zarządzanie butlami nurkowymi.",
-    ["flutter", "firebase", "rpi", "restapi"],
+    "System do monitorowania butli nurkowych podczas rejsów.",
+    ["flutter", "firebase", "rpi", "restapi", "python"],
     ["iot"],
     "",
 );
